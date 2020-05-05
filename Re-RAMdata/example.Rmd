@@ -1,0 +1,33 @@
+---
+title: "ReRAM"
+author: "Sareh Assiri"
+date: "February 6, 2020"
+output: html_document
+---
+
+```{r}
+my_data<-read.delim("Wafer1_23C.csv", sep=",", header = F, skip = 1)
+
+#head(my_data)
+nedf<-my_data[,c(1:8)]
+head(nedf)
+
+(M <- mean(nedf$V1))
+sd(nedf$V1)
+
+# plot(nedf$V1 ,type="h")
+# plot(nedf$V2 ,type="h")
+# plot(nedf$V3 ,type="h")
+# plot(nedf$V4 ,type="h")
+
+hist(nedf$V1)
+hist(nedf$V2)
+hist(nedf$V3)
+hist(nedf$V4)
+hist(nedf$V5)
+hist(nedf$V6)
+hist(nedf$V7)
+hist(nedf$V8)
+
+```
+
